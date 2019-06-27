@@ -106,7 +106,7 @@ RCT_EXPORT_METHOD(pay:(NSDictionary *)options resolver:(RCTPromiseResolveBlock)r
     [self.payment setShortDescription:description];
     
     self.configuration = [[PayPalConfiguration alloc] init];
-    [self.configuration setAcceptCreditCards:true];
+    [self.configuration setAcceptCreditCards:false];
     [self.configuration setPayPalShippingAddressOption:PayPalShippingAddressOptionPayPal];
     
     PayPalPaymentViewController *vc = [[PayPalPaymentViewController alloc] initWithPayment:self.payment
